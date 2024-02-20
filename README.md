@@ -35,7 +35,7 @@ To run this project locally, follow these steps:
 
 ![Screenshot 1](./public/screenshot1.png)
 
-![Screenshot 2](./public/screenshot1.png)
+![Screenshot 2](./public/screenshot2.png)
 
 ## License
 
