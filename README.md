@@ -20,7 +20,7 @@ Name Analyzer is a simple web application built with Next.js that analyzes a per
 - [Agify](https://api.agify.io)
 - [Genderize](https://api.genderize.io)
 - [Nationalize](https://api.nationalize.io)
-- [Flagsapi](https://flagsapi.com/`)
+- [Flagsapi](https://flagsapi.com/)
 
 ## Getting Started
 
