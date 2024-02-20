@@ -1,5 +1,3 @@
-// components/Loader.js
-
 import styles from "./styles/Loader.module.css";
 
 const Loader = () => {

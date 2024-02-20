@@ -1,7 +1,5 @@
 "use client";
 
-// pages/index.js
-
 import { useState } from "react";
 import Loader from "./Loader";
 import styles from "./styles/Home.module.css";
@@ -34,8 +32,9 @@ const HomePage = () => {
       ]);
 
       setAge(agifyData.age);
-      setGender(genderizeData.gender);
+      setGender(genderizeData.gender.toUpperCase());
       setCountry(nationalizeData.country[0]?.country_id || "Unknown");
+
       setIsLoading(false);
       setShowInfo(true);
     } catch (error) {
@@ -73,6 +72,7 @@ const HomePage = () => {
               <p className={styles.infoText}>Age: {age}</p>
               <p className={styles.infoText}>Gender: {gender}</p>
               <p className={styles.infoText}>Country: {country}</p>
+              <img src={`https://flagsapi.com/${country}/flat/64.png`} />
             </div>
           )}
           {error && (
