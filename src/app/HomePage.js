@@ -31,8 +31,8 @@ const HomePage = () => {
         nationalizeResponse.json(),
       ]);
 
-      setAge(agifyData.age);
-      setGender(genderizeData.gender.toUpperCase());
+      setAge(agifyData.age || "Unknown");
+      setGender(genderizeData.gender || "Unknown");
       setCountry(nationalizeData.country[0]?.country_id || "Unknown");
 
       setIsLoading(false);
@@ -43,6 +43,10 @@ const HomePage = () => {
       setIsLoading(false);
     }
   };
+
+  function capitalizeFirstLetter(string) {
+    return string.slice(0, 1).toUpperCase() + string.slice(1);
+  }
 
   return (
     <div className={styles.container}>
@@ -70,9 +74,15 @@ const HomePage = () => {
           {showInfo && !error && (
             <div className={styles.info}>
               <p className={styles.infoText}>Age: {age}</p>
-              <p className={styles.infoText}>Gender: {gender}</p>
+              <p className={styles.infoText}>
+                Gender: {capitalizeFirstLetter(gender)}
+              </p>
               <p className={styles.infoText}>Country: {country}</p>
-              <img src={`https://flagsapi.com/${country}/flat/64.png`} />
+              {country != "Unknown" ? (
+                <img src={`https://flagsapi.com/${country}/flat/64.png`} />
+              ) : (
+                <p></p>
+              )}
             </div>
           )}
           {error && (
