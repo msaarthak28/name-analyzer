@@ -22,6 +22,10 @@ Name Analyzer is a simple web application built with Next.js that analyzes a per
 - [Nationalize](https://api.nationalize.io)
 - [Flagsapi](https://flagsapi.com/)
 
+## Deployment
+
+This project is deployed and accessible at [Name Analyzer](https://name-analyzer-olive.vercel.app/).
+
 ## Getting Started
 
 To run this project locally, follow these steps:
